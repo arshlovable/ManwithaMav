@@ -1,6 +1,6 @@
 /**
  * Single source of truth for business details.
- * Replace the placeholder phone numbers and URL before going live.
+ * Phone / WhatsApp: Canadian GHL Lead Connector number with WhatsApp Business.
  */
 export const siteConfig = {
   name: "Man with a Mav",
@@ -12,11 +12,11 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://manwithamav.ca",
   locale: "en_CA",
 
-  // E.164 format, digits only for WhatsApp. Replace with the real number.
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "14165550123",
-  // Used for sms: and tel: links. Replace with the real number.
-  phoneNumber: process.env.NEXT_PUBLIC_PHONE_NUMBER ?? "+14165550123",
-  phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "(416) 555-0123",
+  // Digits only (country code first) for wa.me links.
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "12899070169",
+  // E.164 for sms: and tel: links.
+  phoneNumber: process.env.NEXT_PUBLIC_PHONE_NUMBER ?? "+12899070169",
+  phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "(289) 907-0169",
   email: process.env.NEXT_PUBLIC_EMAIL ?? "hello@manwithamav.ca",
 
   serviceAreas: ["Brampton", "Mississauga", "Etobicoke", "Vaughan"] as const,
