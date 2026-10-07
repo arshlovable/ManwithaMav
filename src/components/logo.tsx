@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 export function Logo({ className, compact = false }: { className?: string; compact?: boolean }) {
   return (
-    <a href="#top" className={cn("group inline-flex items-center gap-2.5", className)} aria-label={`${siteConfig.name} home`}>
+    <a href="#top" className={cn("group inline-flex items-center gap-2.5", className)}>
       <span className="flex size-10 items-center justify-center rounded-md bg-mav-yellow text-mav-black">
         <TruckMark className="h-6 w-9" />
       </span>

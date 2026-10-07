@@ -48,7 +48,7 @@ export function MavJobs() {
             return (
               <li
                 key={service.label}
-                className="group flex aspect-square flex-col items-center justify-center gap-3 rounded-xl border border-white/15 bg-mav-ink/60 p-3 text-center transition-colors hover:border-mav-yellow/70 hover:bg-mav-ink"
+                className="group flex aspect-[5/4] flex-col lg:aspect-square items-center justify-center gap-3 rounded-xl border border-white/15 bg-mav-ink/60 p-3 text-center transition-colors hover:border-mav-yellow/70 hover:bg-mav-ink"
               >
                 <Icon className="size-8 text-mav-yellow" strokeWidth={1.75} aria-hidden="true" />
                 <span className="text-xs leading-snug font-semibold text-white/90 sm:text-[0.8rem]">
