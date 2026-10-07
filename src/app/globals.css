@@ -102,7 +102,7 @@
   }
   html {
     @apply font-sans scroll-smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 6.5rem;
   }
   body {
     @apply bg-background text-foreground;

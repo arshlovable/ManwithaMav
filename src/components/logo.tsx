@@ -10,8 +10,11 @@ export function Logo({ className, compact = false }: { className?: string; compa
         src={logoImage}
         alt={siteConfig.name}
         priority
-        sizes={compact ? "140px" : "220px"}
-        className={cn("h-auto w-auto", compact ? "h-10" : "h-11 sm:h-12")}
+        sizes={compact ? "180px" : "280px"}
+        className={cn(
+          "h-auto w-auto",
+          compact ? "h-12 sm:h-14" : "h-14 sm:h-16 md:h-[4.5rem]",
+        )}
       />
     </a>
   );
