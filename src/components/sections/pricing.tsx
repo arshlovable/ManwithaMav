@@ -31,7 +31,7 @@ export function Pricing() {
               className={cn(
                 "relative flex flex-col rounded-2xl border p-7 sm:p-8",
                 tier.popular
-                  ? "order-first border-mav-yellow bg-mav-ink shadow-[0_0_0_1px_rgba(255,194,14,0.25),0_30px_80px_-40px_rgba(255,194,14,0.35)] lg:order-none"
+                  ? "border-mav-yellow bg-mav-ink shadow-[0_0_0_1px_rgba(255,194,14,0.25),0_30px_80px_-40px_rgba(255,194,14,0.35)]"
                   : "border-white/15 bg-mav-ink/70",
               )}
             >
