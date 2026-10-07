@@ -44,7 +44,10 @@ export default async function OpenGraphImage() {
         <div
           style={{
             position: "absolute",
-            inset: 0,
+            top: 0,
+            left: 0,
+            width: 1200,
+            height: 630,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -70,7 +73,7 @@ export default async function OpenGraphImage() {
               display: "flex",
               flexDirection: "column",
               marginTop: 24,
-              fontSize: 104,
+              fontSize: 96,
               lineHeight: 0.92,
               textTransform: "uppercase",
             }}
