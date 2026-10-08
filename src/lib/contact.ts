@@ -1,4 +1,4 @@
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "../config/site";
 
 export function buildWhatsAppUrl(message: string = siteConfig.defaultMessage): string {
   const digits = siteConfig.whatsappNumber.replace(/\D/g, "");

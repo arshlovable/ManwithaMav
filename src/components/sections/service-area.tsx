@@ -19,8 +19,8 @@ export function ServiceArea() {
           </ul>
           <p className="mt-6 max-w-md text-base text-white/70 sm:text-lg">
             Local furniture delivery, Marketplace pickups, IKEA pickups and small-load delivery
-            throughout our core GTA service area. Up to 15 km is included; longer trips are welcome
-            at $1.50 per extra km.
+            throughout our core GTA service area. Up to 30 km of driving from pickup to drop-off is
+            included. Longer trips are $1.50 per extra kilometre.
           </p>
         </div>
         <div className="relative">

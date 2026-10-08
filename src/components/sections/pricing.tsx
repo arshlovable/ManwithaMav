@@ -44,7 +44,10 @@ export function Pricing() {
               <h3 id={`tier-${tier.id}`} className="font-heading text-2xl text-white sm:text-3xl">
                 {tier.name}
               </h3>
-              <p className="font-heading mt-4 text-5xl leading-none text-mav-yellow sm:text-6xl">
+              <p className="mt-4 text-xs font-semibold tracking-[0.18em] text-white/55 uppercase">
+                Starting at
+              </p>
+              <p className="font-heading text-5xl leading-none text-mav-yellow sm:text-6xl">
                 ${tier.price}
               </p>
               <p className="mt-3 text-sm text-white/70 sm:text-base">{tier.tagline}</p>

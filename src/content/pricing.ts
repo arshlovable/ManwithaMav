@@ -1,3 +1,5 @@
+import { businessConfig } from "@/lib/business-config";
+
 export type TierId = "express" | "full-service";
 
 export interface PricingTier {
@@ -12,42 +14,45 @@ export interface PricingTier {
   cta: string;
 }
 
+const included = `Up to ${businessConfig.includedKm} km from pickup to drop-off`;
+
 export const pricingTiers: PricingTier[] = [
   {
     id: "express",
-    name: "Curb-to-Curb Express",
-    price: 75,
-    tagline: "For straightforward local pickups.",
+    name: businessConfig.tiers.express.name,
+    price: businessConfig.tiers.express.baseCad,
+    tagline: "Transport only. You handle the lifting.",
     includes: [
-      "Up to 15 km included",
-      "Driveway / garage / loading dock pickup",
-      "Driveway / garage / loading dock drop-off",
-      "Secure transport",
+      included,
+      "Driver secures and protects the load",
+      "Driveway, garage, or loading-dock pickup and drop-off",
+      `${businessConfig.tiers.express.handlingMinutes} minutes handling included`,
     ],
     excludes: ["No stairs", "No inside carrying"],
     notice: {
       tone: "warning",
-      text: "Customer provides lifting help at both pickup and drop-off.",
+      text: "Customer provides all lifting and loading help at both pickup and drop-off.",
     },
     cta: "Get a $75 Quote",
   },
   {
     id: "full-service",
-    name: "Full-Service Solo",
-    price: 120,
-    tagline: "Delivery + one-person moving assistance.",
+    name: businessConfig.tiers["full-service"].name,
+    price: businessConfig.tiers["full-service"].baseCad,
+    tagline: "Delivery plus one-person help.",
     popular: true,
     includes: [
-      "Up to 15 km included",
-      "Driver assists with loading & unloading",
-      "Carry inside (ground floor or elevator access)",
-      "Moving blankets & secure transport",
+      included,
+      "Driver assists with loading and unloading",
+      "Carry inside on the ground floor or by elevator",
+      "Moving blankets and secure transport",
       "Maximum 75 lb per item",
+      `${businessConfig.tiers["full-service"].handlingMinutes} minutes handling included`,
     ],
     excludes: ["No stairs", "No items over 75 lb", "No unsafe solo handling"],
     notice: {
       tone: "info",
-      text: "For items that require two people, one capable helper must be available at both pickup and drop-off.",
+      text: "If an item needs two people, one capable helper must be available at both pickup and drop-off.",
     },
     cta: "Get a $120 Quote",
   },
@@ -57,16 +62,16 @@ export const surcharges = [
   {
     id: "distance",
     title: "Longer Trip?",
-    detail: "Distance beyond 15 km: +$1.50/km",
+    detail: `Beyond ${businessConfig.includedKm} km: +$${businessConfig.extraKmRateCad.toFixed(2)}/km`,
     icon: "route",
   },
   {
     id: "rush",
     title: "Rush Hour?",
-    detail: "7:30–9:30 AM or 3:30–6:30 PM: +$30",
+    detail: "Weekdays 7:30–9:30 AM or 3:30–6:30 PM: +$30",
     icon: "clock",
   },
 ] as const;
 
 export const pricingDisclaimer =
-  "Final acceptance depends on item dimensions, weight, access conditions, vehicle capacity and safe loading requirements.";
+  "The included 30 km is the driving route from your pickup to your drop-off. It does not include the driver's trip to the pickup or back home. Longer waits, difficult access, remote positioning, or a complex route need a manual review. No undisclosed fees. Every final price is confirmed before booking.";

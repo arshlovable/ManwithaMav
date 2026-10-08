@@ -43,5 +43,6 @@ export const navLinks = [
   { label: "How It Works", href: "#how-it-works" }, // Steps
   { label: "Services", href: "#services" }, // What's a Mav job
   { label: "Pricing", href: "#pricing" },
+  { label: "Get Estimate", href: "#estimate" },
   { label: "FAQ", href: "#faq" },
 ] as const;

@@ -1,3 +1,4 @@
+import { CustomerFareCalculator } from "@/components/customer-fare-calculator";
 import { MobileCtaBar } from "@/components/mobile-cta-bar";
 import { QuoteProvider } from "@/components/quote-dialog";
 import { Faq } from "@/components/sections/faq";
@@ -23,6 +24,7 @@ export default function HomePage() {
         <MavJobs />
         <Steps />
         <Pricing />
+        <CustomerFareCalculator />
         <WhyMav />
         <ServiceArea />
         <Securement />

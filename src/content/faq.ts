@@ -27,7 +27,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What's the difference between the two services?",
     answer:
-      "Curb-to-Curb Express ($75) is transport only. You and the seller or a helper handle lifting at both ends. Full-Service Solo ($120) adds the driver's help with loading, unloading and carrying inside to a ground-floor or elevator-access location, plus moving blankets. Both include up to 15 km.",
+      "Curb-to-Curb Express starts at $75 and is transport only. You and the seller or a helper handle lifting at both ends, with about 15 minutes of handling included. Full-Service Solo starts at $120 and adds the driver's help with loading, unloading and carrying inside to a ground-floor or elevator-access location, plus moving blankets, with about 30 minutes of handling included and a 75 lb limit per item. Both include up to 30 km of driving from pickup to drop-off.",
   },
   {
     question: "Can you move heavy appliances?",
@@ -37,7 +37,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "Brampton, Mississauga, Etobicoke and Vaughan, with up to 15 km included in the base price. Trips beyond that are welcome at $1.50 per additional km, so a pickup elsewhere in the GTA is often still straightforward.",
+      "Brampton, Mississauga, Etobicoke and Vaughan. Up to 30 km of driving from the pickup address to the drop-off address is included. Trips beyond that are $1.50 per additional kilometre. That allowance does not include the driver's trip to the pickup.",
   },
   {
     question: "Can I book same-day?",

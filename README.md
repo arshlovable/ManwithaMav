@@ -4,7 +4,7 @@ Single-page marketing site for **Man with a Mav**, a hyper-local small-load, fur
 
 > Too big for your car? That's a Mav job.
 
-The site is a static Next.js app. Every call to action opens a pre-filled WhatsApp or SMS message, so there is no backend, database or form service to run.
+The site is a Next.js app. Calls to action open a pre-filled WhatsApp or SMS message. The public fare estimator calls Google Routes on the server when `GOOGLE_MAPS_API_KEY` is set.
 
 ## Stack
 
@@ -29,7 +29,23 @@ npm run build      # production build
 npm run start      # serve the production build on :4317
 npm run lint       # eslint
 npm run typecheck  # tsc --noEmit
+npm test           # pricing engine unit tests
 ```
+
+Copy [`.env.example`](.env.example) to `.env.local` for local secrets.
+
+### Google Maps routing
+
+1. In Google Cloud, create a key and enable **Routes API** and **Places API (New)**.
+2. Restrict the key to those APIs, and to your server IPs if you can. Do not expose it as `NEXT_PUBLIC_`.
+3. Set `GOOGLE_MAPS_API_KEY` in `.env.local` (and in Vercel when you deploy).
+4. Restart `npm run dev`.
+
+Without a key, local development uses a labelled mock route so the form can be tried. Production refuses to invent a distance and asks the customer to send a photo instead.
+
+### Owner calculator
+
+`/owner/calculator` stays off in production until `OWNER_ACCESS_SECRET` is set. The page checks that secret on the server and stores an httpOnly session cookie. It is not a public page and is disallowed in `robots.txt`.
 
 ## Before going live
 
