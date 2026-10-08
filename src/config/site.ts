@@ -38,9 +38,10 @@ export const siteConfig = {
 
 export type ServiceArea = (typeof siteConfig.serviceAreas)[number];
 
+/** In-page anchors only — each href must match a section `id` on the home page. */
 export const navLinks = [
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Services", href: "#services" },
+  { label: "How It Works", href: "#how-it-works" }, // Steps
+  { label: "Services", href: "#services" }, // What's a Mav job
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ] as const;

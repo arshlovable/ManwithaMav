@@ -1,6 +1,7 @@
 import { Logo } from "@/components/logo";
 import { MobileNav } from "@/components/mobile-nav";
 import { QuoteButton } from "@/components/quote-dialog";
+import { SectionLink } from "@/components/section-link";
 import { navLinks } from "@/config/site";
 
 export function Header() {
@@ -13,13 +14,13 @@ export function Header() {
         <Logo />
         <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a
+            <SectionLink
               key={link.href}
               href={link.href}
               className="text-base font-medium text-white/80 transition-colors hover:text-mav-yellow"
             >
               {link.label}
-            </a>
+            </SectionLink>
           ))}
         </nav>
         <div className="flex items-center gap-2">

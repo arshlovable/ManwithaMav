@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { Logo } from "@/components/logo";
 import { useQuote } from "@/components/quote-dialog";
+import { SectionLink } from "@/components/section-link";
 import { navLinks, siteConfig } from "@/config/site";
 import { WhatsAppIcon } from "@/components/icons";
 import { buildSmsUrl, buildWhatsAppUrl } from "@/lib/contact";
@@ -41,14 +42,15 @@ export function MobileNav() {
         </SheetHeader>
         <nav aria-label="Mobile" className="mt-6 flex flex-col">
           {navLinks.map((link) => (
-            <a
+            <SectionLink
               key={link.href}
               href={link.href}
-              onClick={() => setOpen(false)}
+              delayMs={280}
+              onNavigate={() => setOpen(false)}
               className="border-b border-white/10 py-4 font-heading text-2xl tracking-wide text-white transition-colors hover:text-mav-yellow"
             >
               {link.label}
-            </a>
+            </SectionLink>
           ))}
         </nav>
         <div className="mt-auto flex flex-col gap-3">
