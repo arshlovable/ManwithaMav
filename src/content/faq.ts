@@ -22,7 +22,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Do you handle stairs?",
     answer:
-      "Not on either tier. Pickup and drop-off need driveway, garage, loading dock or ground-floor access. Elevator buildings are fine on Full-Service Solo. If stairs are unavoidable, mention it when you send your photo and we'll let you know if it's workable.",
+      "Jobs need no or minimal stairs. Pickup and drop-off work best with driveway, garage, loading dock or ground-floor access. Elevator buildings are fine on Full-Service Solo. If more than a short step or two is involved, mention it when you send your photo and we'll confirm whether it's workable.",
   },
   {
     question: "What's the difference between the two services?",

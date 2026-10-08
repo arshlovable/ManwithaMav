@@ -186,7 +186,8 @@ export async function suggestAddresses(input: string): Promise<{ suggestions: st
       locationBias: {
         circle: {
           center: { latitude: 43.65, longitude: -79.62 },
-          radius: 60000,
+          // Places Autocomplete allows at most 50,000 metres.
+          radius: 50000,
         },
       },
     }),

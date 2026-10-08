@@ -20,7 +20,7 @@ export const businessConfig = {
       baseCad: 75,
       handlingMinutes: 15,
       loadingAcknowledgement:
-        "I understand Curb-to-Curb Express means I (or someone at each stop) provide all lifting and loading help at both pickup and drop-off. There are no stairs and no inside carrying.",
+        "I understand Curb-to-Curb Express means I (or someone at each stop) provide all lifting and loading help at both pickup and drop-off. There are no or minimal stairs and no inside carrying.",
     },
     "full-service": {
       id: "full-service" as const,
@@ -28,7 +28,7 @@ export const businessConfig = {
       baseCad: 120,
       handlingMinutes: 30,
       loadingAcknowledgement:
-        "I understand Full-Service Solo is one driver, 75 lb per item, ground floor or elevator only, and no stairs. If an item needs two people, a capable helper must be at both pickup and drop-off.",
+        "I understand Full-Service Solo is one driver, 75 lb per item, ground floor or elevator only, and no or minimal stairs. If an item needs two people, a capable helper must be at both pickup and drop-off.",
     },
   },
   /** Internal defaults. The owner calculator can override these per estimate. */

@@ -38,9 +38,9 @@ export function useQuote(): QuoteContextValue {
 
 const accessOptions = [
   "Driveway / garage / curb",
-  "Ground floor, no stairs",
+  "Ground floor, no or minimal stairs",
   "Elevator building",
-  "Stairs involved",
+  "More than minimal stairs",
 ] as const;
 
 const areaOptions = [...siteConfig.serviceAreas, "Other (GTA)"] as const;
@@ -196,7 +196,7 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
                 </Label>
                 <Select value={access} onValueChange={setAccess}>
                   <SelectTrigger id="quote-access" className="h-10 w-full bg-white/5 text-white">
-                    <SelectValue placeholder="Stairs or elevator?" />
+                    <SelectValue placeholder="Access: stairs or elevator?" />
                   </SelectTrigger>
                   <SelectContent position="popper">
                     {accessOptions.map((a) => (

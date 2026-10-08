@@ -28,7 +28,7 @@ export const pricingTiers: PricingTier[] = [
       "Driveway, garage, or loading-dock pickup and drop-off",
       `${businessConfig.tiers.express.handlingMinutes} minutes handling included`,
     ],
-    excludes: ["No stairs", "No inside carrying"],
+    excludes: ["No or minimal stairs", "No inside carrying"],
     notice: {
       tone: "warning",
       text: "Customer provides all lifting and loading help at both pickup and drop-off.",
@@ -44,12 +44,12 @@ export const pricingTiers: PricingTier[] = [
     includes: [
       included,
       "Driver assists with loading and unloading",
-      "Carry inside on the ground floor or by elevator",
+      "Carry inside on the ground floor or by elevator (no or minimal stairs)",
       "Moving blankets and secure transport",
       "Maximum 75 lb per item",
       `${businessConfig.tiers["full-service"].handlingMinutes} minutes handling included`,
     ],
-    excludes: ["No stairs", "No items over 75 lb", "No unsafe solo handling"],
+    excludes: ["No or minimal stairs", "No items over 75 lb", "No unsafe solo handling"],
     notice: {
       tone: "info",
       text: "If an item needs two people, one capable helper must be available at both pickup and drop-off.",
